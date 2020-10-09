@@ -7,8 +7,43 @@
 html {
     background-color: #fff;
     color: #525252;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: "Lato", "Arial", sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* this will make our fonts rendering in a perfect way */
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto; /* top right bottom left */
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /* we put linear-gradient on the top of the image to make it appear darker */
+            url(img/hero.jpg);
+    background-size: cover; /* makes us see the whole image */
+    background-position: center;
+    height: 100vh; /* 100vh means it's 100% of the viewport */
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%; /* moves children to the center */
+    left: 50%;
+    transform: translate(
+        -50%,
+        -50%
+    ); /* moves text to the left 50% so it'll stay in the centre */
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 240%; /* it'll be 2 * 20px = 40px; */
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
