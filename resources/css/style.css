@@ -49,23 +49,43 @@ h1 {
     word-spacing: 4px;
 }
 
-.btn {
+.btn:link,
+.btn:visited /* btn link and btn visited have both the same style, so they both will look the same */ {
     display: inline-block; /* to create button ui we need to change display element from 'inline' to 'inline-block' */
     padding: 10px 30px; /* 10px from top and bottom, 30px from left and right */
     font-weight: 300;
     font-size: 90%;
     text-decoration: none; /* here we delete the text underline (uhh ugly shit) */
     border-radius: 200px; /* it makes the button round */
-    color: #fff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; /* so when we hover over those buttons the background color and other properties won't change instantaneously but over a period of 0.2sec */
 }
 
-.btn-full {
+.btn-full:link,
+.btn-full:visited {
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
+    margin-right: 15px;
 }
 
-.btn-ghost {
+.btn-ghost:link,
+.btn-ghost:visited {
     border: 1px solid #e67e22;
     color: #e67e22;
+}
+
+.btn:hover,
+.btn:active /* we want the buttons to look the same while hover or active */ {
+    background-color: #c6650f;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #c6650f;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #c6650f;
+    color: #fff;
 }
