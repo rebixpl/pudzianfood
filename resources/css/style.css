@@ -21,7 +21,7 @@ html {
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         /* we put linear-gradient on the top of the image to make it appear darker */
-            url(img/hero.jpg);
+            url(img/hero.png);
     background-size: cover; /* makes us see the whole image */
     background-position: center;
     height: 100vh; /* 100vh means it's 100% of the viewport */
@@ -39,11 +39,33 @@ header {
 }
 
 h1 {
-    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
     color: #fff;
     font-size: 240%; /* it'll be 2 * 20px = 40px; */
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 4px;
+}
+
+.btn {
+    display: inline-block; /* to create button ui we need to change display element from 'inline' to 'inline-block' */
+    padding: 10px 30px; /* 10px from top and bottom, 30px from left and right */
+    font-weight: 300;
+    font-size: 90%;
+    text-decoration: none; /* here we delete the text underline (uhh ugly shit) */
+    border-radius: 200px; /* it makes the button round */
+    color: #fff;
+}
+
+.btn-full {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn-ghost {
+    border: 1px solid #e67e22;
+    color: #e67e22;
 }
