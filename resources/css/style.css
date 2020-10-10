@@ -1,3 +1,10 @@
+/*
+Orange color: #e67e22
+*/
+
+/* ---------------------------------------------- */
+/* BASIC SETUP */
+/* ---------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -13,31 +20,16 @@ html {
     text-rendering: optimizeLegibility; /* this will make our fonts rendering in a perfect way */
 }
 
+/* ---------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ---------------------------------------------- */
+
 .row {
     max-width: 1140px;
     margin: 0 auto 0 auto; /* top right bottom left */
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        /* we put linear-gradient on the top of the image to make it appear darker */
-            url(img/hero.png);
-    background-size: cover; /* makes us see the whole image */
-    background-position: center;
-    height: 100vh; /* 100vh means it's 100% of the viewport */
-}
-
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%; /* moves children to the center */
-    left: 50%;
-    transform: translate(
-        -50%,
-        -50%
-    ); /* moves text to the left 50% so it'll stay in the centre */
-}
-
+/* ----- HEADINGS ----- */
 h1 {
     margin-bottom: 20px;
     margin-top: 0;
@@ -49,6 +41,7 @@ h1 {
     word-spacing: 4px;
 }
 
+/* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited /* btn link and btn visited have both the same style, so they both will look the same */ {
     display: inline-block; /* to create button ui we need to change display element from 'inline' to 'inline-block' */
@@ -88,4 +81,62 @@ h1 {
 .btn-ghost:active {
     border: 1px solid #c6650f;
     color: #fff;
+}
+
+/* ---------------------------------------------- */
+/* HEADER */
+/* ---------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /* we put linear-gradient on the top of the image to make it appear darker */
+            url(img/hero.png);
+    background-size: cover; /* makes us see the whole image */
+    background-position: center;
+    height: 100vh; /* 100vh means it's 100% of the viewport */
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%; /* moves children to the center */
+    left: 50%;
+    transform: translate(
+        -50%,
+        -50%
+    ); /* moves text to the left 50% so it'll stay in the centre */
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none; /* we get rid of those bullet points */
+    margin-top: 50px;
+}
+
+.main-nav li /* we select all 'li' elements inside main-nav */ {
+    display: inline-block; /* inline-blocks, so they can be displayed side by side */
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited /* we select all 'a' elements inside 'li' elements inside 'main-nav' */ {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none; /* to get rid of the underline */
+    text-transform: uppercase;
+    font-size: 90%; /* it will give us 18px from basic 20px */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
 }
