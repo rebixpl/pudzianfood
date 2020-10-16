@@ -197,3 +197,27 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/* ---------------------------------------------- */
+/* MEALS */
+/* ---------------------------------------------- */
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%; /* it means that 'meal-photo' has 100% of width of its parent which is 'meals-showcase li' whis has 25% of screen width */
+    margin: 0;
+}
+
+.meal-photo img {
+    width: 100%;
+}
