@@ -20,6 +20,15 @@ html {
     text-rendering: optimizeLegibility; /* this will make our fonts rendering in a perfect way */
 }
 
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* ---------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ---------------------------------------------- */
@@ -201,7 +210,7 @@ header {
 /* ---------------------------------------------- */
 /* FEATURES */
 /* ---------------------------------------------- */
-.section-features .long-copy{
+.section-features .long-copy {
     margin-bottom: 30px;
 }
 
@@ -240,6 +249,57 @@ header {
 }
 
 .meal-photo img:hover /* we can use 'hover' property with everything even images */ {
-    opacity: 1.0;
+    opacity: 1;
     transform: scale(1.04);
+}
+
+/* ---------------------------------------------- */
+/* HOW IT WORKS */
+/* ---------------------------------------------- */
+
+.section-steps{
+    background-color: $f4f4f4 /* changes 'how it works' section background color to subtle grey */
+}
+
+.steps-box:first-child /* the first  child of steps-box class will be image */ {
+    text-align: right; /* although we don't have text, text-align works also for image */
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div /* works-step div is our number which we want to become circle */{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* that way we can ensure that element doesn't force a linebrake */
+    border-radius: 50%; /* make the circle */
+    height: 55px;
+    width: 55px;
+    text-align: center; /* center the number inside circle */
+    padding: 5px;
+    float: left; /* so the text can appear next to the circle */
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
