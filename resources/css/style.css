@@ -85,13 +85,13 @@ h2:after /* after means that this stuff will appear after the h2 element */ {
     margin-left: 15%;
 }
 
-.box p /* I select all the paragraphs inside a box class */{
+.box p /* I select all the paragraphs inside a box class */ {
     font-size: 90%;
     line-height: 145%;
 }
 
 /* ----- ICONS ----- */
-.icon-big{
+.icon-big {
     font-size: 360%;
     display: block;
     color: #e67e22;
@@ -199,10 +199,21 @@ header {
 }
 
 /* ---------------------------------------------- */
+/* FEATURES */
+/* ---------------------------------------------- */
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------- */
 /* MEALS */
 /* ---------------------------------------------- */
 
-.meals-showcase{
+.section-meals {
+    padding: 0px;
+}
+
+.meals-showcase {
     list-style: none;
     width: 100%;
 }
@@ -213,11 +224,22 @@ header {
     width: 25%;
 }
 
-.meal-photo{
+.meal-photo {
     width: 100%; /* it means that 'meal-photo' has 100% of width of its parent which is 'meals-showcase li' whis has 25% of screen width */
     margin: 0;
+    overflow: hidden;
+    background-color: #000; /* we add black container behind the images to make them appear darker by playing with opacity */
 }
 
 .meal-photo img {
+    opacity: 0.7;
     width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover /* we can use 'hover' property with everything even images */ {
+    opacity: 1.0;
+    transform: scale(1.04);
 }
