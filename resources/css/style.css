@@ -107,6 +107,36 @@ h2:after /* after means that this stuff will appear after the h2 element */ {
     margin-bottom: 10px;
 }
 
+.icon-small{
+    display: inline-block; /* icons must be inline-block to get aligned to the center */
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /* secrets to align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ----- LINKS ----- */
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
 /* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited /* btn link and btn visited have both the same style, so they both will look the same */ {
@@ -258,7 +288,7 @@ header {
 /* ---------------------------------------------- */
 
 .section-steps{
-    background-color: $f4f4f4 /* changes 'how it works' section background color to subtle grey */
+    background-color: #f4f4f4 /* changes 'how it works' section background color to subtle grey */
 }
 
 .steps-box:first-child /* the first  child of steps-box class will be image */ {
@@ -298,8 +328,27 @@ header {
     margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0px;
+}
+
 .btn-app img{
     height: 50px;
     width: auto;
     margin-right: 10px;
+}
+
+/* ---------------------------------------------- */
+/* CITIES */
+/* ---------------------------------------------- */
+
+.box img{
+    width:  100%; /* sets the width of the img to width of the box */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
 }
